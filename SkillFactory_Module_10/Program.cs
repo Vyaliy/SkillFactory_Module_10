@@ -6,10 +6,10 @@ internal partial class Program
     static void Main(string[] args)
     {
         lg.Event("Программа начала работу");
+        SumOfTwoNumbers<int> sum = new SumOfTwoNumbers<int>();
         Console.WriteLine("Введите два числа");
         try
         {
-            SumOfTwoNumbers<int> sum = new SumOfTwoNumbers<int>();
             sum.SetValues();
             sum.Calculate(lg);
             sum.DisplayResult(lg);
