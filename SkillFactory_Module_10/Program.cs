@@ -1,18 +1,18 @@
 ﻿namespace SkillFactory_Module_10;
 
-internal partial class Program
+public class Program
 {
     static Logger lg = new Logger();
     static void Main(string[] args)
     {
         lg.Event("Программа начала работу");
-        SumOfTwoNumbers sum = new SumOfTwoNumbers();
+        SumOfTwoNumbers sum = new SumOfTwoNumbers(lg);
         Console.WriteLine("Введите два числа");
         try
         {
             sum.SetValues();
-            sum.Calculate(lg);
-            sum.DisplayResult(lg);
+            sum.Calculate();
+            sum.DisplayResult();
         } 
         catch (Exception ex)
         {
