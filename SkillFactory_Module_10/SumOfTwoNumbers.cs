@@ -5,7 +5,7 @@ namespace SkillFactory_Module_10;
 
 internal partial class Program
 {
-    public class SumOfTwoNumbers<T> : ISumator<T> where T : INumber<T>
+    public class SumOfTwoNumbers : ISumator<int>
     {
 
         private int firstNum;
@@ -23,7 +23,7 @@ internal partial class Program
 
         public void Calculate(Logger lg)
         {
-            this.result = ((ISumator<int>)this).Sum(firstNum, secondNum);
+            this.result = Sum(firstNum, secondNum);
             lg.Event("Сумма значений вычеслена успешно");
         }
 
@@ -33,14 +33,6 @@ internal partial class Program
             lg.Event("Результат выведен на экран");
         }
 
-        public T Sum(T left, T rigth)
-        {
-            throw new NotImplementedException();
-        }
 
-        T ISumator<T>.Sum(T left, T rigth)
-        {
-            return checked(left + rigth);
-        }
     }
 }

@@ -6,7 +6,7 @@ internal partial class Program
     static void Main(string[] args)
     {
         lg.Event("Программа начала работу");
-        SumOfTwoNumbers<int> sum = new SumOfTwoNumbers<int>();
+        SumOfTwoNumbers sum = new SumOfTwoNumbers();
         Console.WriteLine("Введите два числа");
         try
         {
